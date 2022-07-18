@@ -1,0 +1,409 @@
+
+/**llamar a las tipografias por css**/
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Nunito+Sans:wght@400;600&family=Roboto+Condensed:wght@300&display=swap');
+
+/* mis fuentes 
+font-family: 'League Gothic', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+
+
+/* reseteo para todos los navegadores */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*colores
+
+#222831 negro
+#393E46 gris 
+#00ADB5 azul
+#EEEEEE blanco
+
+*/
+
+body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    color: #EEEEEE;
+    background-color: #222831;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    }
+
+.navegador{
+    
+    list-style: none;
+    margin: 10px;
+    
+}
+
+.navegador li{
+        display: inline-block;
+
+}
+
+.navegador li a {
+    text-decoration: none;
+    color:#00ADB5;
+    font-size: 20px;
+}
+
+main {
+    background-color: #ffffff;
+    font-family: 'League Gothic', sans-serif;
+    font-size: 10px;
+}
+
+
+.banner{
+height: 300px;
+text-align: center;    
+background-image: url(../images/dientes\ 1.jpg);
+background-size: contain;
+padding: 10%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+.banner p{
+font-size: 50px;
+}
+
+/* Home */
+
+
+.beneficios{
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+h1{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #EEEEEE;
+    padding: 5px;
+    border: 7px solid black;
+    text-align: center;
+    font-size: 25px;
+    background-color: #393E46;
+}
+article{
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    border: 7px solid black;
+    background-color: #393E46;
+}
+.cali{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;  
+    margin: 10px;
+    font-size: 25px;
+    flex-wrap: wrap
+    
+}
+
+.cali img {
+    height: 200px;
+    margin: 20px solid #00ADB5;
+    padding: 5px;
+    border: 7px solid black;
+    background-color: #EEEEEE;
+    
+}
+
+/* transformacion y transicion 
+se le pone el hover al padre y despues se especifica
+en cual hijo*/
+
+.cali:hover img{
+transform: translateX(100px);
+transition: all 3s ease-in;
+}
+
+.banner {
+	-webkit-animation: banner  2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: banner  2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* ----------------------------------------------
+
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+ @-webkit-keyframes banner {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes banner {
+    0% {
+      letter-spacing: -0.5em;
+      opacity: 0;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+
+/*-----------*/
+
+.cali p {
+    width: auto;
+}
+
+
+h2{
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #EEEEEE;
+    padding: 5px;
+    border: 7px solid black;
+    text-align: center;
+    font-size: 25px;
+    background-color: #393E46;
+}
+iframe{
+    padding: 5px;
+    border: 7px solid black;
+}
+.videos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+    align-items: center
+}
+.instagram .post {
+margin: 10px; 
+}
+picture img{
+    border-radius: 10px;
+}
+
+footer{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    border: 7px solid black;
+    background-color: white; 
+    justify-content: flex-end;
+}
+
+.redes li {
+    display: inline-block;   
+}
+
+.redes li a{
+text-decoration: none;
+color: #EEEEEE;
+margin-left: 10px;
+}
+.redes li a img{ 
+    height:50px ;
+}
+/* Servicios */
+
+.servicios {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+.servicios div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;  
+    padding: 10px;
+}
+.servicios div img { 
+    width: 350px;
+}
+.servicios div p { 
+    width: 350px;
+}
+
+/* Staff */
+
+.staff {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    align-content: center;
+    justify-content:space-evenly ;
+    align-items: center;
+}
+
+.staff div img { 
+    width: 350px;
+    height: 440px;
+}
+.staff div p { 
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 350px;
+}
+
+/* paquetes */
+
+
+.paquetes {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    justify-content: left;
+    align-content: center;
+    align-items: center;
+    }
+
+.paquetes p{
+    width: auto;
+    margin-top: 10px;
+}
+
+/* contactanos */
+
+.contactanos {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content:space-evenly ;
+    align-content:center;
+}
+.contactanos .xxx {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.contactanos .yyy {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 250px;
+}
+    
+
+.contactanos div p {
+    width: 250px;
+}
+
+/* declaramos las areas del home*/
+
+header {
+    grid-area: header;
+}
+.grilla-general {
+    grid-area: grilla;
+}
+.banner {
+    grid-area: banner;
+}
+
+.beneficios {
+    grid-area: beneficios;
+}
+
+.cali {
+    grid-area: cali;
+}
+.tesimonios {
+    grid-area: testimonios ;
+}
+.instagram {
+    grid-area: instagram;
+}
+footer {
+    grid-area: footer;
+}
+
+/* acomodar la grilla por areas */
+
+body {
+    grid-template-areas: 
+    "header"
+    "grilla"
+    "footer"
+    ;
+}
+
+.grilla-general {
+    display:grid ;
+    gap:10px ;
+    grid-template-areas: 
+    "banner"
+    "beneficios"
+    "cali"
+    "testimonios"
+    "instagram"
+    ;
+}
+
+.post {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap:10px;
+}
+
+.post img {
+    border-top: 10px;
+}
+
+@media (min-width:600px) {
+    
+    .post {
+        grid-template-columns: 1fr;
+    }
+    .videos{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+
+@media (min-width:900px) {
+    
+    .post {
+        grid-template-columns: 1fr 1fr;
+    }
+    .videos{
+      grid-template-columns: 1fr 1fr 1fr;
+ 
+
+}
+@media (min-width:1024px) {
+    
+    .post {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
