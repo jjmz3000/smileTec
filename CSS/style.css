@@ -41,14 +41,14 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: 100%;
+    width: auto;
     }
 
 .navegador{
     
     list-style: none;
     margin: 10px;
-    
+    width: auto;
 }
 
 .navegador li{
@@ -102,7 +102,8 @@ h1{
     background-color: #393E46;
 }
 article{
-    font-size: 15px;
+    font-size: 20px;
+    color: #EEEEEE;
     text-align: center;
     padding: 5px;
     border: 7px solid black;
@@ -138,9 +139,10 @@ transition: all 3s ease-in;
 }
 
 .banner {
-	-webkit-animation: banner  2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: banner  2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	-webkit-animation: tracking-in-expand  3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand  2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
+
 
 /* ----------------------------------------------
 
@@ -148,7 +150,7 @@ transition: all 3s ease-in;
  * animation tracking-in-expand
  * ----------------------------------------
  */
- @-webkit-keyframes banner {
+ @-webkit-keyframes tracking-in-expand {
     0% {
       letter-spacing: -0.5em;
       opacity: 0;
@@ -160,7 +162,7 @@ transition: all 3s ease-in;
       opacity: 1;
     }
   }
-  @keyframes banner {
+  @keyframes tracking-in-expand {
     0% {
       letter-spacing: -0.5em;
       opacity: 0;
@@ -178,8 +180,40 @@ transition: all 3s ease-in;
 
 .cali p {
     width: auto;
+	-webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2 both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2 both;
 }
 
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
 
 h2{
     font-family: 'Roboto Condensed', sans-serif;
