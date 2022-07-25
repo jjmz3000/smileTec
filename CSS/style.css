@@ -38,18 +38,20 @@ body {
     background-color: #222831;
    font-family: 'Roboto Condensed', sans-serif;
     color:#00ADB5;
-    margin: 10px; */
+    margin: 10px;
 }
  
 .flex {
     display: flex;
     align-items: flex-end;
+    color: #00ADB5;
 }
 
 .flex li a {
         font-size: 20px;
-        color:#00ADB5;
     }
+
+/* configuracion header viejo --
 
 .header1 {
     color: #EEEEEE;
@@ -62,7 +64,6 @@ body {
     width: 100%;
     }
 
-    
 
 .navegador{
     
@@ -83,6 +84,8 @@ body {
     font-size: 20px;
 }
 
+*/
+
 main {
     background-color: #ffffff;
     font-family: 'League Gothic', sans-serif;
@@ -96,9 +99,11 @@ text-align: center;
 background-image: url(../images/dientes\ 1.jpg);
 background-size: contain;
 padding: 10%;
+margin: 10px;
 display: flex;
 flex-direction: column;
 justify-content: center;
+width: 98%;
 }
 .banner p{
 font-size: 50px;
@@ -378,10 +383,11 @@ header {
     grid-area: header;
 }
 
+/*
 .header1 {
     grid-area: header1;
 }
-
+*/
 
 .grilla-general {
     grid-area: grilla;
@@ -412,7 +418,7 @@ footer {
 body {
     grid-template-areas: 
     "header"
-    "header1"
+  /*  "header1"  */
     "grilla"
     "footer"
     ;
