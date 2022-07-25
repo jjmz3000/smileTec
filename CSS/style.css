@@ -33,7 +33,25 @@ body {
     min-height: 100vh;
 }
 
-header {
+.header0 {
+    
+    background-color: #222831;
+   font-family: 'Roboto Condensed', sans-serif;
+    color:#00ADB5;
+    margin: 10px; */
+}
+ 
+.flex {
+    display: flex;
+    align-items: flex-end;
+}
+
+.flex li a {
+        font-size: 20px;
+        color:#00ADB5;
+    }
+
+.header1 {
     color: #EEEEEE;
     background-color: #222831;
     font-family: 'Roboto Condensed', sans-serif;
@@ -41,8 +59,10 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    width: auto;
+    width: 100%;
     }
+
+    
 
 .navegador{
     
@@ -53,6 +73,7 @@ header {
 
 .navegador li{
         display: inline-block;
+        border: 10px;
 
 }
 
@@ -250,6 +271,7 @@ footer{
     border: 7px solid black;
     background-color: white; 
     justify-content: flex-end;
+
 }
 
 .redes li {
@@ -355,6 +377,12 @@ margin-left: 10px;
 header {
     grid-area: header;
 }
+
+.header1 {
+    grid-area: header1;
+}
+
+
 .grilla-general {
     grid-area: grilla;
 }
@@ -384,10 +412,12 @@ footer {
 body {
     grid-template-areas: 
     "header"
+    "header1"
     "grilla"
     "footer"
     ;
 }
+
 
 .grilla-general {
     display:grid ;
@@ -412,6 +442,9 @@ body {
 .post img {
     border-top: 10px;
 }
+
+/* media querie desde mobile first a patalla 
+si lo quier de desktop a mobile cambio el min por max y arranco desde desktop min width (>) y max width (<) menor q*/
 
 @media (min-width:600px) {
     
@@ -441,3 +474,26 @@ body {
     .post {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    /* listado del navedador viejo 
+    
+     <ul class="navegador">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="./pages/servicios.html">Servicios</a>
+            </li>
+            <li>
+                <a href="./pages/paquetes.html">Paquetes</a>
+            </li>
+            <li>
+                <a href="./pages/staff.html">Staff</a>
+            </li>
+            <li>
+                <a href="./pages/contactanos.html">Contactanos</a>
+            </li>
+        </ul>
+
+        */
+        
