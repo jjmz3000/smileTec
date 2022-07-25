@@ -34,11 +34,9 @@ body {
 }
 
 .header0 {
-    
-    background-color: #222831;
-   font-family: 'Roboto Condensed', sans-serif;
-    color:#00ADB5;
-    margin: 10px;
+background-color: #222831;
+margin: 10px;
+width: 98%;
 }
  
 .flex {
@@ -49,6 +47,8 @@ body {
 
 .flex li a {
         font-size: 20px;
+        font-family: 'Roboto Condensed', sans-serif;
+        color:#00ADB5;
     }
 
 /* configuracion header viejo --
@@ -92,22 +92,28 @@ main {
     font-size: 10px;
 }
 
+h5 {
+    font-size: 50px;
+}
 
+
+.banner0 p{
+    font-size: 30px;
+}
+
+/* banner viejo
 .banner{
 height: 300px;
 text-align: center;    
 background-image: url(../images/dientes\ 1.jpg);
 background-size: contain;
-padding: 10%;
-margin: 10px;
 display: flex;
 flex-direction: column;
 justify-content: center;
-width: 98%;
 }
 .banner p{
 font-size: 50px;
-}
+} */
 
 /* Home */
 
@@ -392,7 +398,7 @@ header {
 .grilla-general {
     grid-area: grilla;
 }
-.banner {
+.banner0 {
     grid-area: banner;
 }
 
@@ -480,26 +486,3 @@ si lo quier de desktop a mobile cambio el min por max y arranco desde desktop mi
     .post {
         grid-template-columns: 1fr 1fr 1fr;
     }
-
-    /* listado del navedador viejo 
-    
-     <ul class="navegador">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="./pages/servicios.html">Servicios</a>
-            </li>
-            <li>
-                <a href="./pages/paquetes.html">Paquetes</a>
-            </li>
-            <li>
-                <a href="./pages/staff.html">Staff</a>
-            </li>
-            <li>
-                <a href="./pages/contactanos.html">Contactanos</a>
-            </li>
-        </ul>
-
-        */
-        
