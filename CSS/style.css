@@ -33,6 +33,11 @@ body {
     min-height: 100vh;
 }
 
+.barra1{
+    width: 100%;
+    margin: 10px;
+}
+
 .header0 {
 background-color: #222831;
 margin: 10px;
@@ -41,7 +46,7 @@ width: 98%;
  
 .flex {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     color: #00ADB5;
 }
 
@@ -297,27 +302,7 @@ margin-left: 10px;
 .redes li a img{ 
     height:50px ;
 }
-/* Servicios */
 
-.servicios {
-    display: flex;
-    flex-direction: column;
-    margin: 20px;
-}
-
-.servicios div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;  
-    padding: 10px;
-}
-.servicios div img { 
-    width: 350px;
-}
-.servicios div p { 
-    width: 350px;
-}
 
 /* Staff */
 
@@ -383,7 +368,7 @@ margin-left: 10px;
     width: 250px;
 }
 
-/* declaramos las areas del home*/
+/* Declaramos las areas del home*/
 
 header {
     grid-area: header;
@@ -421,7 +406,8 @@ footer {
 
 /* acomodar la grilla por areas */
 
-body {
+.body-home {
+    display:grid
     grid-template-areas: 
     "header"
   /*  "header1"  */
@@ -434,6 +420,7 @@ body {
 .grilla-general {
     display:grid ;
     gap:10px ;
+    justify-content: center;
     grid-template-areas: 
     "banner"
     "beneficios"
@@ -445,7 +432,7 @@ body {
 
 .post {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     justify-items: center;
     gap:10px;
@@ -455,34 +442,167 @@ body {
     border-top: 10px;
 }
 
+
+/* Servicios */
+
+.servicios{
+    margin: 10px;
+    align-items: center;
+}
+ 
+.servicios div img { 
+    margin:10px;
+    width: 100%;
+}
+.servicios div p { 
+    width: 100%;
+}
+
+/* Declaramos las areas de servicios*/
+
+.body-ser {
+    display:grid
+    grid-template-areas: 
+    "header"
+    "servicios"
+    "footer"
+    ;
+}
+
+.flex1{
+    grid-area: flex1;
+}
+.flex2{
+    grid-area: flex2;
+}
+.flex3{
+    grid-area: flex3;
+}
+.flex4{
+    grid-area: flex4;
+}
+
+
+.img1  {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3{
+    grid-area: img3;
+}
+.p1  {
+    grid-area: p1;
+}
+.p2 {
+    grid-area: p2;
+}
+.p3{
+    grid-area: p3;
+}
+
+.servicios {
+    display:grid;
+    gap:10px ;
+    justify-content: center;
+    grid-area: servicios;
+    grid-template-areas: 
+    "flex1" 
+    "flex2" 
+    "flex3" 
+    "flex4"
+    ;
+         
+}
+
+.servicios div img{
+    border-radius: 10px;
+}
+
+/* pseudo elemento */
+
+h1:hover{
+    color:#00ADB5;
+    background-color: #EEEEEE;
+}
+
+.p1:hover{
+    color:#00ADB5;
+}
+.p2:hover{
+    color:#00ADB5;
+}
+.p3:hover{
+    color:#00ADB5;
+}
+.p4:hover{
+    color:#00ADB5;
+}
+
+/* pseudo clase*/
+a:active {
+    color:white;
+}
+a:visited{
+    color:#00ADB5;
+}
+
 /* media querie desde mobile first a patalla 
 si lo quier de desktop a mobile cambio el min por max y arranco desde desktop min width (>) y max width (<) menor q*/
 
-@media (min-width:600px) {
+
+
+@media (min-width:320px) {
+    .barra1 {
+        width: 100%;
+    }
+    .post {
+        grid-template-columns: 1fr 1fr;
+    }
+    .servicios {
+        grid-template-areas: 
+    "flex1 flex2" 
+    "flex3 flex4"
+    ;
+    }
+}
+
+@media (min-width:524px) {
+    .flex {
+        align-items: flex-end;
+}
+
+@media (min-width:576px) {
     
     .post {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     .videos{
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-
+    }    
 }
 
-@media (min-width:900px) {
+@media (min-width:992px) {
     
     .post {
         grid-template-columns: 1fr 1fr;
     }
     .videos{
       grid-template-columns: 1fr 1fr 1fr;
- 
-
+    }
+    .servicios {
+        grid-template-areas: 
+    "flex1 flex2 flex3 flex4" 
+        ;
+    }
 }
-@media (min-width:1024px) {
+@media (min-width:1200px) {
     
     .post {
         grid-template-columns: 1fr 1fr 1fr;
     }
+}
