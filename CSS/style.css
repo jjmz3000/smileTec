@@ -407,10 +407,9 @@ footer {
 /* acomodar la grilla por areas */
 
 .body-home {
-    display:grid
-    grid-template-areas: 
+    display:grid ;
+    grid-template-areas:
     "header"
-  /*  "header1"  */
     "grilla"
     "footer"
     ;
@@ -461,7 +460,7 @@ footer {
 /* Declaramos las areas de servicios*/
 
 .body-ser {
-    display:grid
+    display:grid;
     grid-template-areas: 
     "header"
     "servicios"
@@ -572,7 +571,7 @@ si lo quier de desktop a mobile cambio el min por max y arranco desde desktop mi
     .flex {
         align-items: flex-end;
 }
-
+}
 @media (min-width:576px) {
     
     .post {
