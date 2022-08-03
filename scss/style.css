@@ -1,0 +1,438 @@
+/**llamar a las tipografias por css**/
+@import url("https://fonts.googleapis.com/css2?family=League+Gothic&family=Nunito+Sans:wght@400;600&family=Roboto+Condensed:wght@300&display=swap");
+/* mis fuentes 
+font-family: 'League Gothic', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+*/
+/* reseteo para todos los navegadores */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*colores
+
+#222831 negro
+#393E46 gris 
+#00ADB5 azul
+#EEEEEE blanco */
+.body-home {
+  text-align: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-areas: "header0" "grilla" "footer";
+}
+
+.barra1 {
+  grid-area: header0;
+  width: auto;
+  margin: 10px;
+}
+.barra1 header {
+  background-color: #222831;
+  margin: 10px;
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.barra1 header .flex {
+  display: flex;
+  align-items: flex-start;
+  color: #00ADB5;
+}
+.barra1 header .flex li a {
+  font-size: 20px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #00ADB5;
+}
+.barra1 header .flex li a:active {
+  color: white;
+}
+.barra1 header .flex li a:visited {
+  color: #00ADB5;
+}
+
+.grilla-general {
+  grid-area: grilla;
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  background-color: #ffffff;
+  font-family: "League Gothic", sans-serif;
+  font-size: 10px;
+  grid-template-areas: "banner" "beneficios" "cali" "testimonios" "instagram";
+}
+.grilla-general .banner {
+  grid-area: banner;
+  /* animation tracking-in-expand */
+  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+.grilla-general .banner h5 {
+  font-size: 50px;
+}
+.grilla-general .banner p {
+  font-size: 30px;
+}
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.grilla-general .beneficios {
+  grid-area: beneficios;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grilla-general .beneficios h1 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #EEEEEE;
+  padding: 5px;
+  border: 7px solid black;
+  text-align: center;
+  font-size: 25px;
+  background-color: #393E46;
+}
+.grilla-general .beneficios article {
+  font-size: 20px;
+  color: #EEEEEE;
+  text-align: center;
+  padding: 5px;
+  border: 7px solid black;
+  background-color: #393E46;
+}
+.grilla-general .cali {
+  grid-area: cali;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px;
+  font-size: 25px;
+  flex-wrap: wrap;
+}
+.grilla-general .cali img {
+  height: 200px;
+  margin: 20px solid #00ADB5;
+  padding: 5px;
+  border: 7px solid black;
+  background-color: #EEEEEE;
+}
+.grilla-general .cali img:hover {
+  transform: translateX(100px);
+  transition: all 3s ease-in;
+}
+.grilla-general .cali p { /* animation text-focus-in*/
+  width: auto;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2 both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2 both;
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+.grilla-general .testimonios {
+  grid-area: testimonios;
+}
+.grilla-general .testimonios h2 {
+  font-family: "Roboto Condensed", sans-serif;
+  color: #EEEEEE;
+  padding: 5px;
+  border: 7px solid black;
+  text-align: center;
+  font-size: 25px;
+  background-color: #393E46;
+}
+.grilla-general .testimonios .videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 10px;
+  align-items: center;
+}
+.grilla-general .testimonios .videos iframe {
+  padding: 5px;
+  border: 7px solid black;
+}
+.grilla-general .instagram {
+  grid-area: instagram;
+}
+.grilla-general .instagram .post {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  gap: 10px;
+  margin: 10px;
+}
+.grilla-general .instagram .post img {
+  border-radius: 10px;
+  border-top: 10px;
+}
+
+footer {
+  grid-area: footer;
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  border: 7px solid black;
+  background-color: white;
+  justify-content: flex-end;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+footer .redes li {
+  display: inline-block;
+}
+footer .redes li a {
+  text-decoration: none;
+  color: #EEEEEE;
+  margin-left: 10px;
+}
+footer .redes li a img {
+  height: 50px;
+}
+
+/* Servicios */
+.servicios {
+  margin: 10px;
+  align-items: center;
+}
+
+.servicios div img {
+  margin: 10px;
+  width: 100%;
+}
+
+.servicios div p {
+  width: 100%;
+}
+
+/* Declaramos las areas de servicios*/
+.body-ser {
+  display: grid;
+  grid-template-areas: "header" "servicios" "footer";
+}
+
+.flex1 {
+  grid-area: flex1;
+}
+
+.flex2 {
+  grid-area: flex2;
+}
+
+.flex3 {
+  grid-area: flex3;
+}
+
+.flex4 {
+  grid-area: flex4;
+}
+
+.img1 {
+  grid-area: img1;
+}
+
+.img2 {
+  grid-area: img2;
+}
+
+.img3 {
+  grid-area: img3;
+}
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+
+.p3 {
+  grid-area: p3;
+}
+
+.servicios {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  grid-area: servicios;
+  grid-template-areas: "flex1" "flex2" "flex3" "flex4";
+}
+
+.servicios div img {
+  border-radius: 10px;
+}
+
+/* pseudo elemento */
+h1:hover {
+  color: #00ADB5;
+  background-color: #EEEEEE;
+}
+
+.p1:hover {
+  color: #00ADB5;
+}
+
+.p2:hover {
+  color: #00ADB5;
+}
+
+.p3:hover {
+  color: #00ADB5;
+}
+
+.p4:hover {
+  color: #00ADB5;
+}
+
+/* paquetes */
+.paquetes {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  justify-content: left;
+  align-content: center;
+  align-items: center;
+}
+
+.paquetes p {
+  width: auto;
+  margin-top: 10px;
+}
+
+/* Staff */
+.staff {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.staff div img {
+  width: 350px;
+  height: 440px;
+}
+
+.staff div p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 350px;
+}
+
+/* contactanos */
+.contactanos {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+  justify-content: space-evenly;
+  align-content: center;
+}
+
+.contactanos .xxx {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contactanos .yyy {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 250px;
+}
+
+.contactanos div p {
+  width: 250px;
+}
+
+/* media querie desde mobile first a patalla 
+si lo quier de desktop a mobile cambio el min por max y arranco desde desktop min width (>) y max width (<) menor q*/
+@media (min-width: 320px) {
+  .barra1 {
+    width: 100%;
+  }
+  .post {
+    grid-template-columns: 1fr 1fr;
+  }
+  .servicios {
+    grid-template-areas: "flex1 flex2" "flex3 flex4";
+  }
+}
+@media (min-width: 524px) {
+  .flex {
+    align-items: flex-end;
+  }
+}
+@media (min-width: 576px) {
+  .post {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .videos {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .post {
+    grid-template-columns: 1fr 1fr;
+  }
+  .videos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .servicios {
+    grid-template-areas: "flex1 flex2 flex3 flex4";
+  }
+}
+@media (min-width: 1200px) {
+  .post {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}/*# sourceMappingURL=style.css.map */

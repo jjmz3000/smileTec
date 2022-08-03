@@ -1,0 +1,96 @@
+/* Servicios */
+
+.servicios{
+    margin: 10px;
+    align-items: center;
+}
+ 
+.servicios div img { 
+    margin:10px;
+    width: 100%;
+}
+.servicios div p { 
+    width: 100%;
+}
+
+/* Declaramos las areas de servicios*/
+
+.body-ser {
+    display:grid;
+    grid-template-areas: 
+    "header"
+    "servicios"
+    "footer"
+    ;
+}
+
+.flex1{
+    grid-area: flex1;
+}
+.flex2{
+    grid-area: flex2;
+}
+.flex3{
+    grid-area: flex3;
+}
+.flex4{
+    grid-area: flex4;
+}
+
+
+.img1  {
+    grid-area: img1;
+}
+.img2 {
+    grid-area: img2;
+}
+.img3{
+    grid-area: img3;
+}
+.p1  {
+    grid-area: p1;
+}
+.p2 {
+    grid-area: p2;
+}
+.p3{
+    grid-area: p3;
+}
+
+.servicios {
+    display:grid;
+    gap:10px ;
+    justify-content: center;
+    grid-area: servicios;
+    grid-template-areas: 
+    "flex1" 
+    "flex2" 
+    "flex3" 
+    "flex4"
+    ;
+         
+}
+
+.servicios div img{
+    border-radius: 10px;
+}
+
+/* pseudo elemento */
+
+h1:hover{
+    color:#00ADB5;
+    background-color: #EEEEEE;
+}
+
+.p1:hover{
+    color:#00ADB5;
+}
+.p2:hover{
+    color:#00ADB5;
+}
+.p3:hover{
+    color:#00ADB5;
+}
+.p4:hover{
+    color:#00ADB5;
+}

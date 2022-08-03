@@ -38,7 +38,7 @@ body {
     margin: 10px;
 }
 
-.header0 {
+header {
 background-color: #222831;
 margin: 10px;
 width: 100%;
@@ -103,23 +103,9 @@ h5 {
 }
 
 
-.banner0 p{
+.banner p{
     font-size: 30px;
 }
-
-/* banner viejo
-.banner{
-height: 300px;
-text-align: center;    
-background-image: url(../images/dientes\ 1.jpg);
-background-size: contain;
-display: flex;
-flex-direction: column;
-justify-content: center;
-}
-.banner p{
-font-size: 50px;
-} */
 
 /* Home */
 
@@ -140,7 +126,7 @@ h1{
     background-color: #393E46;
 }
 article{
-    font-size: 20px;
+    font-size: 30px;
     color: #EEEEEE;
     text-align: center;
     padding: 5px;
@@ -171,7 +157,7 @@ article{
 se le pone el hover al padre y despues se especifica
 en cual hijo*/
 
-.cali:hover img{
+.cali img:hover{
 transform: translateX(100px);
 transition: all 3s ease-in;
 }
@@ -375,11 +361,6 @@ header {
     grid-area: header;
 }
 
-/*
-.header1 {
-    grid-area: header1;
-}
-*/
 
 .grilla-general {
     grid-area: grilla;
@@ -550,8 +531,6 @@ a:visited{
 
 /* media querie desde mobile first a patalla 
 si lo quier de desktop a mobile cambio el min por max y arranco desde desktop min width (>) y max width (<) menor q*/
-
-
 
 @media (min-width:320px) {
     .barra1 {

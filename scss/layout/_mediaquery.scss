@@ -1,0 +1,56 @@
+/* media querie desde mobile first a patalla 
+si lo quier de desktop a mobile cambio el min por max y arranco desde desktop min width (>) y max width (<) menor q*/
+
+@media (min-width:320px) {
+    .barra1 {
+        width: 100%;
+    }
+    .post {
+        grid-template-columns: 1fr 1fr;
+    }
+    .servicios {
+        grid-template-areas: 
+    "flex1 flex2" 
+    "flex3 flex4"
+    ;
+    }
+}
+
+@media (min-width:524px) {
+    .flex {
+        align-items: flex-end;
+}
+}
+@media (min-width:576px) {
+    
+    .post {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .videos{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    }    
+}
+
+@media (min-width:992px) {
+    
+    .post {
+        grid-template-columns: 1fr 1fr;
+    }
+    .videos{
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .servicios {
+        grid-template-areas: 
+    "flex1 flex2 flex3 flex4" 
+        ;
+    }
+}
+@media (min-width:1200px) {
+    
+    .post {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

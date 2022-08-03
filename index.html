@@ -6,19 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./scss/style.css">
 </head>
 <body class="body-home">
     <div class="container-fluid barra1">
-      <header class="header0">
-        <nav class="navbar navbar-expand-lg navbar-dark ">
+      <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
               <a class="navbar-brand" href="./index.html"><img src="./images/logo.jpeg" alt="logo" class="w-25"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex ">
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex">
                   <li class="nav-link active">
                      <a class="nav-link" href="./pages/servicios.html">Servicios</a>
                   </li>
@@ -37,36 +37,12 @@
           </nav>
       </header>
     </div>
-    <!--header viejo lo dejo por si me gusta mas ++ 
+   
+    <main class="grilla-general">
         
-        <header class="header1">   
-            <nav class="navViejo">    
-            <ul class="navegador">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="./pages/servicios.html">Servicios</a>
-            </li>
-            <li>
-                <a href="./pages/paquetes.html">Paquetes</a>
-            </li>
-            <li>
-                <a href="./pages/staff.html">Staff</a>
-            </li>
-            <li>
-                <a href="./pages/contactanos.html">Contactanos</a>
-            </li>
-            </ul>
-            </nav>    
-    </header>
-      -->
+    <section class="banner container-fluid">
 
-    <main class="grilla-general container-fluid">
-        
-    <div class="container-fluid">
-
-        <div id="carouselExampleCaptions" class="carousel slide banner0" data-bs-ride="carousel">
+        <div id="carouselExampleCaptions"         class="carousel slide container-fluid" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -92,8 +68,8 @@
                 <div class="carousel-caption d-none d-md-block">
                   <h5>Third slide label</h5>
                   <p>Some representative placeholder content for the third slide.</p>
-                </div>
               </div>
+            </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
               <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -105,29 +81,23 @@
             </button>
         </div>
 
-        <!-- banner viejo
+      </section>
 
-            <div class="banner">
-            <p>Dental Tourism</p>
-            <p>Specialist in Smile Design</p>
-        </div> 
- -->
-    </div>
-
-        <div class="beneficios">   
+      <section class="beneficios">   
             <h1>Porque Smiletec ?</h1>
             <article>
             <p>Mas de 25 años de experiecia</p>
             <p>Equipo de mas de 6 especialistas en las diferentes areas</p>
             <p>No dañamos tus dientes</p>
             </article>
-        </div>
+      </section>
     
-        <section class="cali"> 
+      <section class="cali"> 
             <img src="./images/dientes 2.jpg" alt="foto diseño de sonrisa">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, odit? Quod non commodi placeat suscipit. Magnam illum nihil blanditiis autem asperiores ipsum inventore saepe consequatur quasi, natus quibusdam officiis quis!</p>
-        </section>
-        <section class="testimonios">
+      </section>
+        
+      <section class="testimonios">
             <h2>TESTIMONIOS</h2>
             <DIV class="videos">   
             <iframe width="250" height="auto" src="https://www.youtube.com/embed/DTyR2tVS7s8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
@@ -137,8 +107,9 @@
             <iframe width="250" height="auto" src="https://www.youtube.com/embed/DTyR2tVS7s8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
             </DIV>
-        </section>
-        <section class="instagram container-fluid">
+      </section>
+        
+      <section class="instagram container-fluid">
             <h2>INSTAGRAM</h2>
             <DIV class="post">
                 <picture>
@@ -172,7 +143,9 @@
                     <img src="./images/instagram/200x150/foto6.jpg" alt="dientes6">
                 </picture>
             </DIV>
-        </section>
+        
+      </section>
+      
     </main>
 
 
@@ -193,7 +166,7 @@
             <a href="https://wa.link/r55u5i" target="_blank"><img src="./images/whatsapp-96.png" alt="whatsapp"></a>
         </li>
     </ul>
-    </footer>
+       </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
