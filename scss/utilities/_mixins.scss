@@ -1,5 +1,12 @@
 @mixin medidas ($ancho, $largo) {
     width: $ancho;
     height: $largo;
+}
 
+@mixin flexcentercol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }

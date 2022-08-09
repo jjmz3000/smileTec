@@ -1,7 +1,6 @@
 footer{
     grid-area:footer;
     @include medidas(auto, fit-content);
-    width: auto;
     display: flex;
     flex-direction: row;
     padding: 5px;

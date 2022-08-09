@@ -1,6 +1,6 @@
 .barra1{
     grid-area: header0;
-    @include medidas(auto, none);
+    @include medidas(100%, none);
     margin: 10px;
     color: $color1;
 

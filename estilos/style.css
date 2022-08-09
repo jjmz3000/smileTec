@@ -37,7 +37,7 @@ font-family: 'Roboto Condensed', sans-serif;
 
 .barra1 {
   grid-area: header0;
-  width: auto;
+  width: 100%;
   height: none;
   margin: 10px;
   color: #393E46;
@@ -238,7 +238,6 @@ footer {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  width: auto;
   display: flex;
   flex-direction: row;
   padding: 5px;
@@ -355,43 +354,51 @@ h1:hover {
 /* paquetes */
 .paquetes {
   grid-area: paquetes;
-  display: flex;
-  flex-direction: column;
   margin: 20px;
-  justify-content: left;
-  align-content: center;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-
 .paquetes p {
   width: auto;
   height: none;
   margin-top: 10px;
 }
 
-/* Staff */
+/*staff*/
 .staff {
   grid-area: staff;
-  display: flex;
-  flex-direction: row;
-  margin: 20px;
-  align-content: center;
-  justify-content: space-evenly;
-  align-items: center;
+  width: 80%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  gap: 10px;
+  margin: 10px;
 }
-
 .staff div img {
-  width: 350px;
-  height: 440px;
+  width: 200px;
+  height: 250px;
 }
-
 .staff div p {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  width: 350px;
+  margin: 20px;
+  text-align: justify;
+  width: 80%;
   height: none;
 }
 
+@media (min-width: 576px) {
+  .staff {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .staff {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 /* contactanos */
 .contactanos {
   grid-area: contactanos;
