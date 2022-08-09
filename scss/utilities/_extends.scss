@@ -1,0 +1,35 @@
+.body-ser {
+    @extend .body-home ;
+    grid-template-areas:
+    "header0"
+    "servicios"
+    "footer"
+    ;
+    }
+
+.body-paq {
+    @extend .body-home ;
+    grid-template-areas:
+    "header0"
+    "paquetes"
+    "footer"
+    ;
+    }
+
+.body-staff {
+    @extend .body-home ;
+    grid-template-areas:
+    "header0"
+    "staff"
+    "footer"
+    ;
+    }
+
+.body-cont {
+    @extend .body-home ;
+    grid-template-areas:
+    "header0"
+    "contactanos"
+    "footer"
+    ;
+    }    

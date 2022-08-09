@@ -1,6 +1,7 @@
 /* contactanos */
 
 .contactanos {
+    grid-area: contactanos;
     display: flex;
     flex-direction: row;
     margin: 20px;
@@ -13,15 +14,16 @@
     align-items: flex-start;
 }
 .contactanos .yyy {
+    @include medidas(250px, none);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 250px;
+    
 }
     
 
 .contactanos div p {
-    width: 250px;
+    @include medidas(250px, none);
 }
 
  

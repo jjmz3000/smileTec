@@ -6,23 +6,14 @@
 }
  
 .servicios div img { 
+    @include medidas(100%, none);
     margin:10px;
-    width: 100%;
 }
-.servicios div p { 
-    width: 100%;
+.servicios div p {
+    @include medidas(100%, none); 
 }
 
 /* Declaramos las areas de servicios*/
-
-.body-ser {
-    display:grid;
-    grid-template-areas: 
-    "header"
-    "servicios"
-    "footer"
-    ;
-}
 
 .flex1{
     grid-area: flex1;
@@ -78,19 +69,19 @@
 /* pseudo elemento */
 
 h1:hover{
-    color:#00ADB5;
-    background-color: #EEEEEE;
+    color:$color3;
+    background-color: $color4;
 }
 
 .p1:hover{
-    color:#00ADB5;
+    color: $color3;
 }
 .p2:hover{
-    color:#00ADB5;
+    color: $color3;
 }
 .p3:hover{
-    color:#00ADB5;
+    color: $color3;
 }
 .p4:hover{
-    color:#00ADB5;
+    color: $color3;
 }

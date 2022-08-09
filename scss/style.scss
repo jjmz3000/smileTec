@@ -1,5 +1,9 @@
-@import "./layout/tipografiayreset";
+
+@import "./utilities/variables";
+@import "./utilities/mixins";
+@import "./layout/reset";
 @import "./layout/body-index";
+@import "./utilities/extends";
 @import "./layout/header";
 @import "./layout/main-sesiones-index";
 @import "./layout/footer";

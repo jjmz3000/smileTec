@@ -1,21 +1,22 @@
 footer{
     grid-area:footer;
+    @include medidas(auto, fit-content);
     width: auto;
     display: flex;
     flex-direction: row;
     padding: 5px;
-    border: 7px solid black;
-    background-color: white; 
+    border: 7px solid $color2;
+    background-color: $color1; 
     justify-content: flex-end;
-    height: fit-content;
     .redes{
         li {
             display: inline-block;
             a {
                 text-decoration: none;
-                color: #EEEEEE;
+                color: $color4;
                 margin-left: 10px;  
                 img{
+                    @include medidas(none, 50px);
                     height:50px ; 
                 }
             }

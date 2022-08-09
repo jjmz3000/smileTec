@@ -3,7 +3,7 @@ si lo quier de desktop a mobile cambio el min por max y arranco desde desktop mi
 
 @media (min-width:320px) {
     .barra1 {
-        width: 100%;
+        @include medidas(100%, none);
     }
     .post {
         grid-template-columns: 1fr 1fr;

@@ -2,6 +2,7 @@
 
 
 .paquetes {
+    grid-area: paquetes;
     display: flex;
     flex-direction: column;
     margin: 20px;
@@ -11,6 +12,6 @@
     }
 
 .paquetes p{
-    width: auto;
+    @include medidas(auto, none);
     margin-top: 10px;
 }
