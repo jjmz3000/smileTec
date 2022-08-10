@@ -13,7 +13,6 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 
 .body-home, .body-cont, .body-staff, .body-paq, .body-ser {
-  text-align: center;
   min-height: 100vh;
   display: grid;
   grid-template-areas: "header0" "grilla" "footer";
@@ -43,7 +42,7 @@ font-family: 'Roboto Condensed', sans-serif;
   color: #393E46;
 }
 .barra1 header {
-  width: 100%;
+  width: 97%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
@@ -67,6 +66,11 @@ font-family: 'Roboto Condensed', sans-serif;
   color: #00ADB5;
 }
 
+@media (min-width: 514px) {
+  .barra1 header .flex {
+    align-items: flex-end;
+  }
+}
 .grilla-general {
   grid-area: grilla;
   display: grid;
@@ -382,6 +386,16 @@ h1:hover {
   width: 200px;
   height: 250px;
 }
+.staff div h2 {
+  width: 200px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #EEEEEE;
+  padding: 5px;
+  border: 7px solid #222831;
+  text-align: center;
+  font-size: 25px;
+  background-color: #393E46;
+}
 .staff div p {
   margin: 20px;
   text-align: justify;
@@ -431,10 +445,6 @@ h1:hover {
 /* media querie desde mobile first a patalla 
 si lo quier de desktop a mobile cambio el min por max y arranco desde desktop min width (>) y max width (<) menor q*/
 @media (min-width: 320px) {
-  .barra1 {
-    width: 100%;
-    height: none;
-  }
   .post {
     grid-template-columns: 1fr 1fr;
   }

@@ -9,16 +9,27 @@
     justify-items: center;
     gap:10px;
     margin: 10px;
-    div img { 
-        @include medidas(200px, 250px);
-    }
-    div p { 
-    margin: 20px;
-    text-align: justify;
-    @include medidas(80%, none);
+    div {
+        img { 
+            @include medidas(200px, 250px);
+        }
+        h2 {
+            width: 200px;
+            font-family: $letra3;
+            color: $color4;
+            padding: 5px;
+            border: 7px solid $color2;
+            text-align: center;
+            font-size: 25px;
+            background-color: $color1;
+        }
+        p {
+            margin: 20px;
+            text-align: justify;
+            @include medidas(80%, none);
+        }
     }
 }
-
 @media (min-width:576px) {
     .staff {
         grid-template-columns: 1fr 1fr;
