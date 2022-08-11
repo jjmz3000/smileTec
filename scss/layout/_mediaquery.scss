@@ -5,12 +5,6 @@ si lo quier de desktop a mobile cambio el min por max y arranco desde desktop mi
     .post {
         grid-template-columns: 1fr 1fr;
     }
-    .servicios {
-        grid-template-areas: 
-    "flex1 flex2" 
-    "flex3 flex4"
-    ;
-    }
 }
 
 @media (min-width:524px) {
@@ -39,11 +33,7 @@ si lo quier de desktop a mobile cambio el min por max y arranco desde desktop mi
     .videos{
       grid-template-columns: 1fr 1fr 1fr;
     }
-    .servicios {
-        grid-template-areas: 
-    "flex1 flex2 flex3 flex4" 
-        ;
-    }
+    
 }
 @media (min-width:1200px) {
     

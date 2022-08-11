@@ -3,13 +3,16 @@
 
 .staff {
     grid-area: staff;
-    @include medidas(80%,auto);
+    @include medidas(100%,auto);
     display: grid;
     grid-template-columns: 1fr;
     justify-items: center;
     gap:10px;
     margin: 10px;
     div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         img { 
             @include medidas(200px, 250px);
         }

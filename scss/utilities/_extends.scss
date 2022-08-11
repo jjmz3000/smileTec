@@ -27,6 +27,7 @@
 
 .body-cont {
     @extend .body-home ;
+    justify-items: center;
     grid-template-areas:
     "header0"
     "contactanos"

@@ -1,18 +1,34 @@
 /* Servicios */
 
 .servicios{
+    grid-area: servicios;
     margin: 10px;
+    gap:10px ;
     align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-areas: 
+    "flex1" 
+    "flex2" 
+    "flex3" 
+    "flex4"
+    ;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+        @include medidas(200px, none);
+        border-radius: 10px;
+        margin:10px;
+        }
+        p {
+        margin: 20px;
+        text-align: justify;
+        @include medidas(200px, none); 
+        }
+    }
 }
- 
-.servicios div img { 
-    @include medidas(100%, none);
-    margin:10px;
-}
-.servicios div p {
-    @include medidas(100%, none); 
-}
-
 /* Declaramos las areas de servicios*/
 
 .flex1{
@@ -48,23 +64,7 @@
     grid-area: p3;
 }
 
-.servicios {
-    display:grid;
-    gap:10px ;
-    justify-content: center;
-    grid-area: servicios;
-    grid-template-areas: 
-    "flex1" 
-    "flex2" 
-    "flex3" 
-    "flex4"
-    ;
-         
-}
 
-.servicios div img{
-    border-radius: 10px;
-}
 
 /* pseudo elemento */
 
@@ -84,4 +84,22 @@ h1:hover{
 }
 .p4:hover{
     color: $color3;
+}
+
+
+@media (min-width:524px) {
+    .servicios {
+    grid-template-areas: 
+    "flex1 flex2" 
+    "flex3 flex4" 
+    ;
+    }   
+}
+
+@media (min-width:992px) {
+    .servicios {
+        grid-template-areas: 
+        "flex1 flex2 flex3 flex4"
+        ;
+    }
 }
