@@ -164,7 +164,8 @@ font-family: 'Roboto Condensed', sans-serif;
   transition: all 3s ease-in;
 }
 .grilla-general .cali p { /* animation text-focus-in*/
-  width: auto;
+  text-align: justify;
+  width: 500px;
   height: none;
   -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2 both;
   animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2 both;
@@ -202,11 +203,12 @@ font-family: 'Roboto Condensed', sans-serif;
   background-color: #393E46;
 }
 .grilla-general .testimonios .videos {
-  display: flex;
+  display: grid;
   flex-direction: column;
   justify-content: space-evenly;
   margin: 10px;
   align-items: center;
+  gap: 20px;
 }
 .grilla-general .testimonios .videos iframe {
   padding: 5px;
@@ -227,7 +229,6 @@ font-family: 'Roboto Condensed', sans-serif;
 .grilla-general .instagram .post {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
   justify-items: center;
   gap: 10px;
   margin: 10px;
@@ -237,6 +238,41 @@ font-family: 'Roboto Condensed', sans-serif;
   border-top: 10px;
 }
 
+/*mediaquery*/
+@media (min-width: 320px) {
+  .grilla-general .instagram .post {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 524px) {
+  .flex {
+    align-items: flex-end;
+  }
+}
+@media (min-width: 576px) {
+  .grilla-general .instagram .post {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .videos {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media (min-width: 992px) {
+  .grilla-general .instagram .post {
+    grid-template-columns: 1fr 1fr;
+  }
+  .videos {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 1200px) {
+  .grilla-general .instagram .post {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 footer {
   grid-area: footer;
   width: 100%;
@@ -436,17 +472,29 @@ h1:hover {
   width: 80%;
   height: none;
 }
-
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
   .staff {
     grid-template-columns: 1fr 1fr;
   }
 }
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
   .staff {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+/* 
+@media (min-width:576px) {
+    .staff {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width:992px) {
+    .staff {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+} */
 /* contactanos */
 .contactanos {
   grid-area: contactanos;
@@ -500,41 +548,5 @@ h1:hover {
   .contactanos {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "mapa form1";
-  }
-}
-/* media querie desde mobile first a patalla 
-si lo quier de desktop a mobile cambio el min por max y arranco desde desktop min width (>) y max width (<) menor q*/
-@media (min-width: 320px) {
-  .post {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-@media (min-width: 524px) {
-  .flex {
-    align-items: flex-end;
-  }
-}
-@media (min-width: 576px) {
-  .post {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  .videos {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
-}
-@media (min-width: 992px) {
-  .post {
-    grid-template-columns: 1fr 1fr;
-  }
-  .videos {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-@media (min-width: 1200px) {
-  .post {
-    grid-template-columns: 1fr 1fr 1fr;
   }
 }/*# sourceMappingURL=style.css.map */

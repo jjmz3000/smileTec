@@ -10,3 +10,24 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+
+@mixin pequeño {
+    @media screen and (min-width: 320px) {
+        @content;
+    }
+}
+@mixin mediano {
+    @media screen and (min-width: 576px) {
+        @content;
+    }
+}
+@mixin grande {
+    @media screen and (min-width: 992px) {
+        @content;
+    }
+}
+@mixin muy-grande {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}

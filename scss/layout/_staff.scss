@@ -32,7 +32,20 @@
             @include medidas(80%, none);
         }
     }
+
+    @include mediano {
+    grid-template-columns: 1fr 1fr;
+    }
+    @include grande {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
 }
+
+
+
+
+/* 
 @media (min-width:576px) {
     .staff {
         grid-template-columns: 1fr 1fr;
@@ -43,4 +56,4 @@
     .staff {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-}
+} */
