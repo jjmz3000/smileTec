@@ -1,59 +1,58 @@
 
 /*staff*/
 
-.staff {
-    grid-area: staff;
-    @include medidas(100%,auto);
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap:10px;
-    margin: 10px;
-    div {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        img { 
-            @include medidas(200px, 250px);
-        }
-        h2 {
-            width: 200px;
-            font-family: $letra3;
-            color: $color4;
-            padding: 5px;
-            border: 7px solid $color2;
-            text-align: center;
-            font-size: 25px;
-            background-color: $color1;
-        }
-        p {
-            margin: 20px;
-            text-align: justify;
-            @include medidas(80%, none);
-        }
-    }
-
-    @include mediano {
-    grid-template-columns: 1fr 1fr;
-    }
-    @include grande {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-
-}
-
-
-
-
-/* 
-@media (min-width:576px) {
+.body-staff {
+    @extend .body-home ;
+    grid-template-areas:
+    "header0"
+    "staff"
+    "footer"
+    ;
     .staff {
+        grid-area: staff;
+        @include medidas(100%,auto);
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap:10px;
+        margin: 10px;
+        div {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            img { 
+                @include medidas(200px, 250px);
+            }
+            h2 {
+                width: 200px;
+                font-family: $letra3;
+                color: $color4;
+                padding: 5px;
+                border: 7px solid $color2;
+                text-align: center;
+                font-size: 25px;
+                background-color: $color1;
+            }
+            p {
+                margin: 20px;
+                text-align: justify;
+                @include medidas(80%, none);
+            }
+        }
+
+        @include mediano {
         grid-template-columns: 1fr 1fr;
+        }
+        @include grande {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        align-content: center;
+       }
     }
+    
+    @include grande {
+        grid-template-rows: auto 80% 10%;
+        }
 }
 
-@media (min-width:992px) {
-    .staff {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
-} */
+
+

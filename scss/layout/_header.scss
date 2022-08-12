@@ -1,29 +1,32 @@
 .barra1{
     grid-area: header0;
-    @include medidas(100%, none);
+    @include medidas(100%, fit-content);
     margin: 10px;
     color: $color1;
-
     header {
         @include medidas(97%, fit-content);
         background-color: $color1;
         margin: 10px;
-        .flex {
-            display: flex;
-            align-items: flex-start;
-            color: $color3;
-            li a{
-                font-size: 20px;
-                font-family: $letra3;
-                color:$color3;
-                &:active {
-                    color: $color4;
-                }
-                &:visited{
+        .navbar-collapse {
+            flex-grow: 0;
+            .flex {
+                display: flex;
+                align-items: flex-start;
+                color: $color3;
+                li a{
+                    font-size: 20px;
+                    font-weight: bold;
+                    font-family: $letra3;
                     color:$color3;
+                    &:active {
+                        color: $color4;
+                    }
+                    &:visited{
+                        color:$color3;
+                    }
                 }
             }
-        }       
+        }           
     }
 }
 

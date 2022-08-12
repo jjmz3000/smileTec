@@ -15,22 +15,3 @@
     "footer"
     ;
     }
-
-.body-staff {
-    @extend .body-home ;
-    grid-template-areas:
-    "header0"
-    "staff"
-    "footer"
-    ;
-    }
-
-.body-cont {
-    @extend .body-home ;
-    justify-items: center;
-    grid-template-areas:
-    "header0"
-    "contactanos"
-    "footer"
-    ;
-    }    

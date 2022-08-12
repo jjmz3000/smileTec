@@ -1,0 +1,54 @@
+<div class="form1">
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde voluptates nam velit cupiditate quas in est veniam omnis expedita labore explicabo, rerum libero dolor ipsam. Itaque fugit cumque tempore at.    
+            </p>
+            <form>
+                <label for="nombre_apellido">Ingrese Nombre y Apellido</label>
+                <input type="text" name="nombre_apellido" />
+                <br>
+                <label for="Edad">Ingrese la edad</label>
+                <input type="number" name="Edad" />
+                <br>
+                <label for="Observaciones">Ingrese dudas</label>
+                <br>
+                <textarea name="text" name="Observaciones" cols="30" rows="10"></textarea>
+                <br>
+
+                <input type="submit" value="enviar info"   />
+                <input type="reset" value="borrar info"   />
+
+                <div>Hombre</div>
+                <input type="radio" name="Sexo" value="Hombre" />
+                <div>Mujer</div>
+                <input type="radio" name="Sexo" value="Mujer" />
+                <br>
+                <select name="tallas">
+                    <option value="S">Small</option>
+                    <option value="M">Medium</option>
+                    <option value="L">Large</option>
+                </select>
+                <div>Acepto terminos y condiciones</div>
+                <input type="checkbox" name="acepta" value="1">
+                <br>
+                <input type="submit" value="enviar info">
+
+            </form>
+        </div>
+
+/* css 
+
+  .form1 {
+        grid-area: form1;
+        @include medidas(300px, none);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        p {
+            margin: 20px;
+            margin-top: 0px;
+            text-align: justify;
+            @include medidas(300px, none);
+        }
+    }
+*/
