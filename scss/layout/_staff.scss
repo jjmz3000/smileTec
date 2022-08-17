@@ -21,23 +21,34 @@
             align-items: center;
             flex-direction: column;
             img { 
-                @include medidas(200px, 250px);
+                border-radius: 10px;
+                margin-bottom: 10px;
+                @include medidas($ancho-st1, 250px);
             }
             h2 {
-                width: 200px;
+                width: $ancho-st1;
                 font-family: $letra3;
-                color: $color4;
+                color: $color1;
                 padding: 5px;
-                border: 7px solid $color2;
+                border: 5px solid $color2;
                 text-align: center;
                 font-size: 25px;
-                background-color: $color1;
+                font-weight: bold;
+                border-radius: 10px;
             }
-            p {
-                margin: 20px;
-                text-align: justify;
-                @include medidas(80%, none);
-            }
+            section {
+                background-color: $color2;
+                border-radius: 10px;
+                p {
+                    margin-bottom: 0;
+                    text-align: start;
+                    @include medidas($ancho-st1, none);
+                    font-family: $letra2;
+                    font-style: 20px;
+                    color: white; 
+                    padding: 10px;
+                }
+            }    
         }
 
         @include mediano {

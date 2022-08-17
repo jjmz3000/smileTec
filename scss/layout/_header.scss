@@ -1,7 +1,6 @@
 .barra1{
     grid-area: header0;
     @include medidas(100%, fit-content);
-    margin: 10px;
     color: $color1;
     header {
         @include medidas(97%, fit-content);

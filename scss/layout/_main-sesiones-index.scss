@@ -16,17 +16,11 @@
     
     .banner {
         grid-area: banner;
-        h5{
-        font-size: 50px;
-        }
-        p{
-        font-size: 30px;
-        }
+        background-color: $color4;
+        margin: 10px;
          /* animation tracking-in-expand */
-	    -webkit-animation: tracking-in-expand  3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        animation: tracking-in-expand  2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        }
-    
+	    -webkit-animation: tracking-in-expand  5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand  3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
         @-webkit-keyframes tracking-in-expand {
             0% {
             letter-spacing: -0.5em;
@@ -50,7 +44,32 @@
             100% {
             opacity: 1;
             }
+        }
+                     
+        .carousel {
+            .carousel-inner{
+                .carousel-item{
+                    img {
+                        border-radius: 10px;
+                    }                    
+                    h5{
+                        font-size: 50px;
+                        color: $color1 ;
+                        text-shadow: -1px -1px 0 $color4;
+                        }
+                    p{
+                        font-size: 30px;
+                        color: $color1;
+                        text-shadow: -1px -1px 0 $color4;
+                        }
+            
+                }
+            }
+        
+        }
     }
+      
+
     .beneficios{
         grid-area: beneficios;
         display: flex;
@@ -65,15 +84,7 @@
             font-size: 25px;
             background-color: $color1;
             }
-            article{
-            font-size: 20px;
-            color: $color4;
-            text-align: center;
-            padding: 5px;
-            border: 7px solid $color2;
-            background-color: $color1;
-            }
-    }
+                }
     .cali{
         grid-area: cali;
         display: flex;
@@ -83,20 +94,20 @@
         margin: 10px;
         font-size: 25px;
         flex-wrap: wrap;
-        img {
-            @include medidas(none, 200px);
-            margin: 20px solid $color3;
-            padding: 5px;
-            border: 7px solid $color2;
-            background-color: $color4;
-            &:hover{
-                transform: translateX(100px);
-                transition: all 3s ease-in;
-            }        
+        gap: 20px;
+        iframe {
+            @include medidas(auto, 350px);
+           border-radius: 10px;
+            
         }
         p {/* animation text-focus-in*/
             text-align: justify;
-            @include medidas(500px, none);
+            @include medidas(auto, none);
+            @media (min-width:438px) {
+                width: 438px;
+                }
+            }
+        
             -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2 both;
             animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 2 both;
         
@@ -147,8 +158,7 @@
             align-items: center;
             gap: 20px;
             iframe{
-            padding: 5px;
-            border: 7px solid $color2;
+                border-radius: 10px;
             }
         }    
     }
@@ -169,54 +179,49 @@
             justify-items: center;
             gap:10px;
             margin: 10px;
-            img {
+            iframe {
                 border-radius: 10px;
                 border-top: 10px;
             }
         }
     }
-}
 
-/*mediaquery*/
 
-@media (min-width:320px) {
-    .grilla-general .instagram .post {
-        grid-template-columns: 1fr 1fr;
-    }
-}
+    /*mediaquery*/
 
-@media (min-width:524px) {
-    .flex {
-        align-items: flex-end;
-}
-}
-@media (min-width:576px) {
-    
-    .grilla-general .instagram .post {
-        grid-template-columns: 1fr 1fr 1fr;
+    @media (min-width:320px) {
+        .grilla-general .instagram .post {
+            grid-template-columns: 1fr;
+        }
     }
-    .videos{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    }    
-}
 
-@media (min-width:992px) {
-    
-    .grilla-general .instagram .post {
-        grid-template-columns: 1fr 1fr;
+    @media (min-width:524px) {
+        .flex {
+            align-items: flex-end;
     }
-    .videos{
-      grid-template-columns: 1fr 1fr 1fr;
     }
-    
-}
-@media (min-width:1200px) {
-    
-    .grilla-general .instagram .post {
-        grid-template-columns: 1fr 1fr 1fr;
+    @media (min-width:780px) {
+        .videos{
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr;
+            }    
+        .grilla-general .instagram .post {
+            grid-template-columns: 1fr 1fr;
+        }
     }
-}
+    @media (min-width:992px) {
+        
+        .grilla-general .instagram .post {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        
+        
+    }
+    @media (min-width:1200px) {
+        
+        .grilla-general .instagram .post {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
 

@@ -1,30 +1,62 @@
 /* paquetes */
 
-.paquetes {
-    grid-area: paquetes;
-    margin: 20px;
-    @include flexcentercol;
-    h2 {
-        width: 100%;
-        font-family: $letra3;
-        color: $color4;
-        padding: 5px;
-        border: 5px solid $color2;
-        text-align: center;
-        font-size: 25px;
-        background-color: $color1;
-    }
-    iframe {
-        width: 100%;
-        height: 400px;
-        padding: 20px ;
+
+.body-paq {
+    @extend .body-home ;
+    grid-template-areas:
+    "header0"
+    "paquetes"
+    "footer"
+    ;
+    .paquetes {
+        grid-area: paquetes;
         margin: 20px;
-        background-color: $color1 ;
-        border: 7px solid $color2;
-    }
-    p{
-    @include medidas(auto, none);
-    text-align: justify;
-    margin-top: 10px;
-    }
+        display: grid;
+        grid-template-columns: 1fr;
+        align-content: space-between;
+        align-items: flex-start;
+        gap: 20px;
+        
+        @media (min-width:992px) {
+            grid-template-columns: 1fr 1fr ;
+        }
+        DIV {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            
+            h2 {
+                width: $ancho-p1;
+                font-family: $letra3;
+                color: $color3;
+                padding: 5px;
+                border: 5px solid $color2;
+                text-align: center;
+                font-size: 25px;
+                background-color: $color1;
+            }
+            iframe {
+                @include medidas($ancho-p1, auto);
+                padding: 20px ;
+                background-color: $color1 ;
+                border: 7px solid $color2;
+                align-content: center
+            }
+            p{
+            @include medidas($ancho-p1, auto);
+            text-align: justify;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: $color2;
+            color: $color4;
+            }
+            @media (min-width:992px) {
+                p, iframe, h2 {
+                    width: $ancho-p2;
+                }
+            }
+        }
+    }   
 }

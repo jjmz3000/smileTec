@@ -12,18 +12,10 @@ font-family: 'Roboto Condensed', sans-serif;
   box-sizing: border-box;
 }
 
-.body-home, .body-cont, .body-staff, .body-paq, .body-ser {
+.body-home, .body-cont, .body-staff, .body-paq {
   min-height: 100vh;
   display: grid;
   grid-template-areas: "header0" "grilla" "footer";
-}
-
-.body-ser {
-  grid-template-areas: "header0" "servicios" "footer";
-}
-
-.body-paq {
-  grid-template-areas: "header0" "paquetes" "footer";
 }
 
 .barra1 {
@@ -32,7 +24,6 @@ font-family: 'Roboto Condensed', sans-serif;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  margin: 10px;
   color: #393E46;
 }
 .barra1 header {
@@ -81,15 +72,11 @@ font-family: 'Roboto Condensed', sans-serif;
 }
 .grilla-general .banner {
   grid-area: banner;
+  background-color: #EEEEEE;
+  margin: 10px;
   /* animation tracking-in-expand */
-  -webkit-animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-  animation: tracking-in-expand 2s cubic-bezier(0.215, 0.61, 0.355, 1) both;
-}
-.grilla-general .banner h5 {
-  font-size: 50px;
-}
-.grilla-general .banner p {
-  font-size: 30px;
+  -webkit-animation: tracking-in-expand 5s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  animation: tracking-in-expand 3s cubic-bezier(0.215, 0.61, 0.355, 1) both;
 }
 @-webkit-keyframes tracking-in-expand {
   0% {
@@ -115,6 +102,19 @@ font-family: 'Roboto Condensed', sans-serif;
     opacity: 1;
   }
 }
+.grilla-general .banner .carousel .carousel-inner .carousel-item img {
+  border-radius: 10px;
+}
+.grilla-general .banner .carousel .carousel-inner .carousel-item h5 {
+  font-size: 50px;
+  color: #393E46;
+  text-shadow: -1px -1px 0 #EEEEEE;
+}
+.grilla-general .banner .carousel .carousel-inner .carousel-item p {
+  font-size: 30px;
+  color: #393E46;
+  text-shadow: -1px -1px 0 #EEEEEE;
+}
 .grilla-general .beneficios {
   grid-area: beneficios;
   display: flex;
@@ -130,14 +130,6 @@ font-family: 'Roboto Condensed', sans-serif;
   font-size: 25px;
   background-color: #393E46;
 }
-.grilla-general .beneficios article {
-  font-size: 20px;
-  color: #EEEEEE;
-  text-align: center;
-  padding: 5px;
-  border: 7px solid #222831;
-  background-color: #393E46;
-}
 .grilla-general .cali {
   grid-area: cali;
   display: flex;
@@ -147,25 +139,24 @@ font-family: 'Roboto Condensed', sans-serif;
   margin: 10px;
   font-size: 25px;
   flex-wrap: wrap;
+  gap: 20px;
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2 both;
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2 both;
 }
-.grilla-general .cali img {
-  width: none;
-  height: 200px;
-  margin: 20px solid #00ADB5;
-  padding: 5px;
-  border: 7px solid #222831;
-  background-color: #EEEEEE;
-}
-.grilla-general .cali img:hover {
-  transform: translateX(100px);
-  transition: all 3s ease-in;
+.grilla-general .cali iframe {
+  width: auto;
+  height: 350px;
+  border-radius: 10px;
 }
 .grilla-general .cali p { /* animation text-focus-in*/
   text-align: justify;
-  width: 500px;
+  width: auto;
   height: none;
-  -webkit-animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2 both;
-  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) 2 both;
+}
+@media (min-width: 438px) {
+  .grilla-general .cali p {
+    width: 438px;
+  }
 }
 @-webkit-keyframes text-focus-in {
   0% {
@@ -187,10 +178,11 @@ font-family: 'Roboto Condensed', sans-serif;
     opacity: 1;
   }
 }
-.grilla-general .testimonios {
+
+.testimonios {
   grid-area: testimonios;
 }
-.grilla-general .testimonios h2 {
+.testimonios h2 {
   font-family: "Roboto Condensed", sans-serif;
   color: #EEEEEE;
   padding: 5px;
@@ -199,7 +191,7 @@ font-family: 'Roboto Condensed', sans-serif;
   font-size: 25px;
   background-color: #393E46;
 }
-.grilla-general .testimonios .videos {
+.testimonios .videos {
   display: grid;
   flex-direction: column;
   justify-content: space-evenly;
@@ -207,14 +199,14 @@ font-family: 'Roboto Condensed', sans-serif;
   align-items: center;
   gap: 20px;
 }
-.grilla-general .testimonios .videos iframe {
-  padding: 5px;
-  border: 7px solid #222831;
+.testimonios .videos iframe {
+  border-radius: 10px;
 }
-.grilla-general .instagram {
+
+.instagram {
   grid-area: instagram;
 }
-.grilla-general .instagram h2 {
+.instagram h2 {
   font-family: "Roboto Condensed", sans-serif;
   color: #EEEEEE;
   padding: 5px;
@@ -223,14 +215,14 @@ font-family: 'Roboto Condensed', sans-serif;
   font-size: 25px;
   background-color: #393E46;
 }
-.grilla-general .instagram .post {
+.instagram .post {
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
   gap: 10px;
   margin: 10px;
 }
-.grilla-general .instagram .post img {
+.instagram .post iframe {
   border-radius: 10px;
   border-top: 10px;
 }
@@ -238,7 +230,7 @@ font-family: 'Roboto Condensed', sans-serif;
 /*mediaquery*/
 @media (min-width: 320px) {
   .grilla-general .instagram .post {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 @media (min-width: 524px) {
@@ -246,22 +238,18 @@ font-family: 'Roboto Condensed', sans-serif;
     align-items: flex-end;
   }
 }
-@media (min-width: 576px) {
-  .grilla-general .instagram .post {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+@media (min-width: 780px) {
   .videos {
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+  }
+  .grilla-general .instagram .post {
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media (min-width: 992px) {
   .grilla-general .instagram .post {
-    grid-template-columns: 1fr 1fr;
-  }
-  .videos {
     grid-template-columns: 1fr 1fr 1fr;
   }
 }
@@ -302,7 +290,7 @@ footer .redes li a img {
   grid-area: servicios;
   margin: 10px;
   gap: 10px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   display: grid;
   grid-template-areas: "flex1" "flex2" "flex3" "flex4";
@@ -311,18 +299,30 @@ footer .redes li a img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: center;
 }
 .servicios div img {
   width: 200px;
-  height: none;
+  height: 140px;
   border-radius: 10px;
   margin: 10px;
 }
+.servicios div h1 {
+  font-size: 22px;
+  margin-bottom: 0px;
+  color: #00ADB5;
+  width: 200PX;
+  text-align: center;
+}
 .servicios div p {
-  margin: 20px;
+  margin: 10px;
   text-align: justify;
   width: 200px;
   height: none;
+  color: white;
+  background-color: #222831;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 /* Declaramos las areas de servicios*/
@@ -399,38 +399,60 @@ h1:hover {
   }
 }
 /* paquetes */
-.paquetes {
+.body-paq {
+  grid-template-areas: "header0" "paquetes" "footer";
+}
+.body-paq .paquetes {
   grid-area: paquetes;
   margin: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
 }
-.paquetes h2 {
+@media (min-width: 992px) {
+  .body-paq .paquetes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.body-paq .paquetes DIV {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.body-paq .paquetes DIV h2 {
+  width: 400px;
   font-family: "Roboto Condensed", sans-serif;
-  color: #EEEEEE;
+  color: #00ADB5;
   padding: 5px;
   border: 5px solid #222831;
   text-align: center;
   font-size: 25px;
   background-color: #393E46;
 }
-.paquetes iframe {
-  width: 100%;
-  height: 400px;
+.body-paq .paquetes DIV iframe {
+  width: 400px;
+  height: auto;
   padding: 20px;
-  margin: 20px;
   background-color: #393E46;
   border: 7px solid #222831;
+  align-content: center;
 }
-.paquetes p {
-  width: auto;
-  height: none;
+.body-paq .paquetes DIV p {
+  width: 400px;
+  height: auto;
   text-align: justify;
-  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #222831;
+  color: #EEEEEE;
+}
+@media (min-width: 992px) {
+  .body-paq .paquetes DIV p, .body-paq .paquetes DIV iframe, .body-paq .paquetes DIV h2 {
+    width: 500px;
+  }
 }
 
 /*staff*/
@@ -453,24 +475,35 @@ h1:hover {
   flex-direction: column;
 }
 .body-staff .staff div img {
-  width: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 230px;
   height: 250px;
 }
 .body-staff .staff div h2 {
-  width: 200px;
+  width: 230px;
   font-family: "Roboto Condensed", sans-serif;
-  color: #EEEEEE;
+  color: #393E46;
   padding: 5px;
-  border: 7px solid #222831;
+  border: 5px solid #222831;
   text-align: center;
   font-size: 25px;
-  background-color: #393E46;
+  font-weight: bold;
+  border-radius: 10px;
 }
-.body-staff .staff div p {
-  margin: 20px;
-  text-align: justify;
-  width: 80%;
+.body-staff .staff div section {
+  background-color: #222831;
+  border-radius: 10px;
+}
+.body-staff .staff div section p {
+  margin-bottom: 0;
+  text-align: start;
+  width: 230px;
   height: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-style: 20px;
+  color: white;
+  padding: 10px;
 }
 @media screen and (min-width: 576px) {
   .body-staff .staff {
@@ -504,6 +537,13 @@ h1:hover {
   margin: 20px;
   justify-content: space-evenly;
   align-content: center;
+  grid-template-areas: "mapa" "formulario";
+}
+@media (min-width: 720px) {
+  .body-cont .contactanos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "mapa formulario";
+  }
 }
 .body-cont .contactanos .mapa {
   grid-area: mapa;
@@ -522,6 +562,10 @@ h1:hover {
   text-align: center;
   font-size: 25px;
   background-color: #393E46;
+  border-radius: 10px;
+}
+.body-cont .contactanos .mapa iframe {
+  border-radius: 10px;
 }
 .body-cont .contactanos .mapa p {
   margin: 20px;
@@ -529,8 +573,24 @@ h1:hover {
   text-align: justify;
   width: 300px;
   height: none;
+  border-radius: 10px;
 }
-.body-cont .contactanos .mapa .formulario {
+.body-cont .contactanos .form-cont {
+  grid-area: formulario;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.body-cont .contactanos .form-cont p {
+  margin: 20px;
+  margin-top: 0px;
+  text-align: justify;
+  width: 300px;
+  height: none;
+  border-radius: 10px;
+}
+.body-cont .contactanos .form-cont .formulario {
   width: 300px;
   height: none;
   font-family: "Roboto Condensed", sans-serif;
@@ -540,4 +600,5 @@ h1:hover {
   text-align: center;
   font-size: 30px;
   background-color: #393E46;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
